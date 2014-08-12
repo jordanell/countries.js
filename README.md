@@ -14,7 +14,7 @@ To populate a dropdown with a list of applicable states / provinces for a select
 your target select element: 
 
 ```javascript
-var index = $("#country").val();
+var index = $("#country")[0].selectedIndex;
 populateState("state", index);
 ```
 
