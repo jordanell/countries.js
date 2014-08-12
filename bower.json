@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "homepage": "https://github.com/jordanell/countries.js",
   "authors": [
+    "Shafiul Azam <ishafiul@gmail.com>",
     "Jordan Ell <jordan.ell7@gmail.com>"
   ],
   "description": "A JS library for populating country and state / province dropdowns.",
