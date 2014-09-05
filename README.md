@@ -4,25 +4,27 @@ This is a simple JS library for populating dropdowns with countries and states /
 
 ## How To Use
 
-To populate a dropdown with a list of countries where "country" is the id of your target select element:
+To have a country select dropdown and a state / province select dropdown work together, where "country" is the id of your country select and "state" is the id of your state / province select, simply use:
 
 ```javascript
-populateCountry("country");
+Countries.create("country", "state");
 ```
 
-To populate a dropdown with a list of applicable states / provinces for a selected country where "state" is the id of
-your target select element: 
+To manually populate a dropdown with a list of countries where "country" is the id of your target select element:
 
 ```javascript
-var index = $("#country")[0].selectedIndex;
-populateState("state", index);
+Countries.fillCountries("country");
 ```
 
-You can place this code in an on change handler for the countries dropdown.
-
-To populate the states / provinces without jQuery, use:
+To manually populate a dropdown with a list of applicable states / provinces for a selected country where "state" is the id of
+your target select element:
 
 ```javascript
-var index = document.getElementById("country").selectedIndex;
-populateState("state", index);
+var country = document.getElementById(countrySelectorId);
+var value = country.options[country.selectedIndex].value;
+Countries.fillStates("state", index);
 ```
+
+## Example
+
+To see this library in action, checkout the example.html file located at the root of the project's directory.

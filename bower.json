@@ -1,7 +1,7 @@
 {
   "name": "countries.js",
-  "main": "countries.js",
-  "version": "1.0.0",
+  "main": "src/countries.js",
+  "version": "1.1.0",
   "homepage": "https://github.com/jordanell/countries.js",
   "authors": [
     "Shafiul Azam <ishafiul@gmail.com>",
