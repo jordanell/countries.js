@@ -2,6 +2,8 @@
 
 This is a simple JS library for populating dropdowns with countries and states / provinces.
 
+![Example](http://i.imgur.com/9CoM6d2.png)
+
 ## How To Use
 
 To have a country select dropdown and a state / province select dropdown work together, where "country" is the id of your country select and "state" is the id of your state / province select, simply use:
