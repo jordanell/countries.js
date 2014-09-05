@@ -4987,7 +4987,7 @@ var Countries = {
     }
   },
 
-  fillStates: function(selectorId, countryIndex) {
+  fillStates: function(selectorId, countryName) {
     var select = document.getElementById(selectorId);
 
     if (select === null) {
@@ -4999,7 +4999,11 @@ var Countries = {
     select.options[0]     = new Option('Select State / Province','');
     select.selectedIndex  = 0;
 
-    var selectedStates = this.data[countryIndex];
+    if (countryName === null || typeof countryName !== "string" || this.data[countryName] == null ) {
+      return;
+    }
+
+    var selectedStates = this.data[countryName];
 
     for (var i = 0; i < selectedStates.length; i++) {
       select.options[select.length] = new Option(selectedStates[i], selectedStates[i]);
@@ -5016,6 +5020,7 @@ var Countries = {
     }
 
     this.fillCountries(countrySelectorId);
+    this.fillStates(stateSelectorId, null);
     cb = this;
     country.addEventListener('change', function() {
       var value = country.options[country.selectedIndex].value;
